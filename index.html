@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- custom style sheet -->
+    <link rel="stylesheet" href="./style/style.css" />
+
+    <!-- scripts for google charts -->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Month", "Amount"],
+          ["Jan", 800],
+          ["Feb", 630],
+          ["Mar", 720],
+          ["Apr", 555],
+          ["May", 455],
+          ["Jun", 580],
+        ]);
+
+        var view = new google.visualization.DataView(data);
+
+        var options = {
+          title: "Monthly expenditure",
+          width: "100%",
+          height: "13vw",
+        };
+        var chart = new google.visualization.ColumnChart(
+          document.getElementById("columnchart_values")
+        );
+        chart.draw(view, options);
+      }
+    </script>
+    <title>Test</title>
+  </head>
+  <body>
+    <!-- Whole content -->
+    <div class="content">
+      <!-- first block, 3 layers -->
+      <div class="first">
+        <div class="h-level">
+          <!-- first block, top-level -->
+          <ul>
+            <li>
+              <i class="fa-solid fa-angles-down"></i>
+            </li>
+            <li>
+              <img src="./style/imgs/peakpx.jpg" />
+            </li>
+            <li>
+              <label class="title"
+                >Goodevening<strong>&nbsp;Moatasem</strong></label
+              >
+            </li>
+            <li>
+              <form action="#">
+                <select>
+                  <option>Family</option>
+                  <option>Frieds</option>
+                </select>
+              </form>
+            </li>
+            <li>
+              <button type="button" class="btn-warn">B</button>
+            </li>
+          </ul>
+        </div>
+        <!-- first block,end top-level -->
+
+        <!-- first block, middle-level -->
+        <div class="m-level">
+          <div class="m-level-first">
+            <div class="m-level-text">
+              <h3>Fishing with Seham</h3>
+              <p>Friday, June 28 at 8.00 am</p>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <img src="./style/imgs/fishing.png" alt="fishing" />
+          </div>
+          <div class="m-level-second">
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <p>Bedtime 9:00 PM</p>
+          </div>
+        </div>
+        <!-- first block,end middle-level -->
+
+        <!-- first block, bottom-level -->
+        <div class="b-level">
+          <div class="b-level-left">
+            <div id="chart_wrap">
+              <div
+                id="columnchart_values"
+                style="width: 30vw; height: 13vw"
+              ></div>
+            </div>
+          </div>
+          <div class="b-level-right">
+            <ul>
+              <li>$640</li>
+              <li>$150</li>
+              <li>$250</li>
+              <li class="li-final">$1040</li>
+            </ul>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+      </div>
+      <!-- first block,end bottom-level -->
+
+      <!-- Second block -->
+      <div class="second">
+        <!-- Second block, title -->
+        <div class="second-title">
+          <p class="title-head"><strong>Grocery</strong>&nbsp; List</p>
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <p class="title-sub">updated by 👩 <strong>Sora</strong> yesterday</p>
+        <!-- Second block, end title -->
+
+        <!-- Second block, item lists -->
+        <div class="second-list">
+          <div class="second-list-items">
+            <img src="./style/imgs/tomato.png" />
+            <div>
+              <h4>Tomato</h4>
+              <p>2 Kg</p>
+            </div>
+          </div>
+          <div class="second-list-items">
+            <img src="./style/imgs/Medicine.png" />
+            <div>
+              <h4>Medicine</h4>
+              <p>5 ear</p>
+            </div>
+          </div>
+          <div class="second-list-items">
+            <img src="./style/imgs/Shrimp.png" />
+            <div>
+              <h4>Shrimp</h4>
+              <p>1 Kg</p>
+            </div>
+          </div>
+          <div class="second-list-items">
+            <img src="./style/imgs/Eggs.png" />
+            <div>
+              <h4>Eggs</h4>
+              <p>8 Eggs</p>
+            </div>
+          </div>
+          <!-- Second block, end item lists -->
+
+          <!-- Second block, bottom texts and images -->
+          <div class="second-txt">
+            <p>It's <strong>Seham's Birthday</strong></p>
+            <p>after 2 days</p>
+            <div class="second-txt-btm">
+              <p>Let's Plan for a Big Gift!</p>
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+          </div>
+          <img src="./style/imgs/bday.png" class="img-bday" alt="Ribbons" />
+          <!-- Second block,end bottom texts and images -->
+        </div>
+        <!-- Second block, end second-list-->
+      </div>
+      <!-- Second block, end -->
+    </div>
+    <!-- Whole content, end -->
+  </body>
+</html>
